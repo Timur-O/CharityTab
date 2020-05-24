@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Charity Tab</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="HandheldFriendly" content="true">
+      <link rel="stylesheet" href="/style.css" type="text/css" />
+      <link rel="preload" href="/content.js" as="script" />
+      <script src="/jquery-3.3.1.min.js"></script>
+
+      <!-- Google Analytics -->
+      <script async defer src="analytics.js"></script>
+  </head>
+  <body>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="aframeholder"></div>
+
+      <div id="todo_container">
+        <button id="todo_toggle_button">
+          <img src="images/checklist.webp" id="todo_button_icon" alt="Toggle To-Do List"/>
+        </button>
+        <div id="todo_item_list">
+          <div id="todo_title">To-Do List:</div>
+          <ul id="todo_item_list_ul"></ul>
+          <input type="text" id="new_todo_item" />
+          <button id="todo_list_add_button">Add Item</button>
+        </div>
+      </div>
+
+      <img id="services_button" alt="services icon" src="images/9_squares.webp"/>
+      <div id="services_container">
+        <p id="services_title">Google Services</p>
+        <a href="https://calendar.google.com"><img src="https://img.icons8.com/color/96/000000/google-calendar.png" class="service_icon" alt="Google Calendar"/></a>
+        <a href="https://classroom.google.com"><img src="https://img.icons8.com/color/96/000000/google-classroom.png" class="service_icon" alt="Google Classroom"/></a>
+        <a href="https://drive.google.com"><img src="https://img.icons8.com/color/96/000000/google-drive.png" class="service_icon" alt="Google Drive"/></a>
+        <a href="https://gmail.com"><img src="https://img.icons8.com/color/96/000000/gmail.png" class="service_icon" alt="Google Gmail"/></a>
+        <a href="https://hangouts.google.com"><img src="https://img.icons8.com/color/96/000000/google-hangouts-chat.png" class="service_icon" alt="Google Hangouts"/></a>
+        <a href="https://keep.google.com"><img src="https://img.icons8.com/color/96/000000/google-keep.png" class="service_icon" alt="Google Keep"/></a>
+        <a href="https://maps.google.com"><img src="https://img.icons8.com/color/96/000000/google-maps.png" class="service_icon" alt="Google Maps"/></a>
+        <a href="https://news.google.com"><img src="https://img.icons8.com/color/96/000000/google-news.png" class="service_icon" alt="Google News"/></a>
+        <a href="https://photos.google.com"><img src="https://img.icons8.com/color/96/000000/google-photos.png" class="service_icon" alt="Google Photos"/></a>
+        <a href="https://translate.google.com"><img src="https://img.icons8.com/color/96/000000/google-translate.png" class="service_icon" alt="Google Translate"/></a>
+        <a href="https://youtube.com"><img src="https://img.icons8.com/color/96/000000/youtube-play.png" class="service_icon" alt="Youtube"/></a>
+      </div>
+
+      <div id="flex_container_td">
+        <div id="flex_container_links">
+          <div class="ql_containers">
+            <img class="ql_options" alt="Options" id="ql1opt" src="/images/more_options.svg" />
+            <a class="quick_link" href="https://youtube.com" id="ql1"></a>
+          </div>
+          <div class="ql_containers">
+            <img class="ql_options" alt="Options" id="ql2opt" src="/images/more_options.svg" />
+            <a class="quick_link" href="https://facebook.com" id="ql2"></a>
+          </div>
+          <div class="ql_containers">
+            <img class="ql_options" alt="Options" id="ql3opt" src="/images/more_options.svg" />
+            <a class="quick_link" href="https://netflix.com" id="ql3"></a>
+          </div>
+          <div class="ql_containers">
+            <img class="ql_options" alt="Options" id="ql4opt" src="/images/more_options.svg" />
+            <a class="quick_link" href="https://smile.amazon.com" id="ql4"></a>
+          </div>
+          <div class="ql_containers">
+            <img class="ql_options" alt="Options" id="ql5opt" src="/images/more_options.svg" />
+            <a class="quick_link" href="https://twitter.com" id="ql5"></a>
+          </div>
+          <div class="ql_containers">
+            <img class="ql_options" alt="Options" id="ql6opt" src="/images/more_options.svg" />
+            <a class="quick_link" href="https://gmail.com" id="ql6"></a>
+          </div>
+          <div id="qladd_container" class="ql_containers">
+            <a class="quick_link" id="qladd"></a>
+          </div>
+        </div>
+        <div id="time_box"></div>
+        <div id="date_box"></div>
+        <div id="change_link">
+          <div id="change_link_title">Edit Quick Link:</div>
+            <div id="qlurl" class="field-container">
+              <label class="url-field-name">URL: </label>
+              <div class="qlinput-container">
+                <input id="qlurl-field" type="text" autocomplete="off" spellcheck="false" required="">
+              </div>
+              <div id="qlinvalid-url">Type a valid URL</div>
+            </div>
+            <div id="qlbuttons-container">
+              <span>
+                <button id="qldelete_button" class="ql_buttons" type="button" title="Remove">Remove</button>
+              </span>
+              <span>
+                <button id="qlcancel_button" class="ql_buttons" type="button" title="Cancel">Cancel</button>
+                <button type="submit" class="ql_buttons" id="qldone_button" title="Done">Done</button>
+              </span>
+            </div>
+        </div>
+        <div id="add_link">
+          <div id="add_link_title">Add New Quick Link:</div>
+            <div id="qladdurl" class="field-container">
+              <label class="url-field-name">URL: </label>
+              <div class="qlinput-container">
+                <input id="qladdurl-field" type="text" autocomplete="off" spellcheck="false" required="">
+              </div>
+              <div id="qladdinvalid-url">Type a valid URL</div>
+            </div>
+            <div id="qlbuttonsadd-container">
+              <span>
+                <button id="qladdcancel_button" class="ql_buttons" type="button" title="Cancel">Cancel</button>
+                <button type="submit" class="ql_buttons" id="qladddone_button" title="Done">Done</button>
+              </span>
+            </div>
+        </div>
+        <div class="notification_box" id="pls_review_box">
+          <img id="exit_review_button" alt="Close Notification" src="/images/exit.webp"/>
+          <p class="notification_header">Congrats on <span id="insert_num_tabs_here"></span> Tabs!</p>
+          <p class="notification_body1">Have you enjoyed using Charity Tab?</p>
+          <p class="notification_body2">If you have, please leave us a five star review:</p>
+          <a class="notification_link" href="https://chrome.google.com/webstore/detail/charity-tab-support-good/jbbikhkomfpfkgeplgpkelfgcafgjkhi/reviews">Write A Review</a>
+        </div>
+      </div>
+
+      <div id="settings_box">
+        <ul id="settings_menu">
+          <img id="exit_settings_button" alt="Exit Settings" src="/images/exit.webp"/>
+          <div id="placeholder_settings_nav"></div>
+          <li id="bg_setting" class="setting_nav_option current_setting_option">Background</li>
+          <li id="ch_setting" class="setting_nav_option">Charity</li>
+          <li id="mc_setting" class="setting_nav_option">Misc. Settings</li>
+        </ul>
+        <div id="background_chooser" class="setting_menu_option">
+          <div id="bg_title">Choose a background!</div>
+          <hr />
+          <div id="bg_flex_container">
+            <div class="bg_flex_column" id="bg_choice_column_1"></div>
+            <div class="bg_flex_column" id="bg_choice_column_2"></div>
+            <div class="bg_flex_column" id="bg_choice_column_3"></div>
+          </div>
+        </div>
+        <div id="charity_settings" class="setting_menu_option">
+          <div class="charity_container">
+            <input class="charity_choice" name="redcross" type="radio" checked/>
+            <img class="charity_logo" src="/images/redcross.webp" alt="Red Cross Logo" />
+            <div class="charity_text">
+              <h3 class="charity_title">Red Cross</h3>
+              <p class="charity_desc">The ICRC responds quickly and efficiently to help people affected by armed conflict. They also respond to disasters in conflict zones, because the effects of a disaster are compounded if a country is already at war. Their activities include: addressing sexual violence, building respect for the law, economic security, enabling people with disabilities & physical rehabilitation, health, helping detainees, humanitarian diplomacy, migrants, refugees, asylum seekers, water and habitat. Visit their website at <a href="https://www.icrc.org/">https://www.icrc.org/</a>.</p>
+            </div>
+          </div>
+          <p id="charity_coming_soon">More charity options coming soon!</p>
+        </div>
+        <div id="misc_settings" class="setting_menu_option">
+            <div id="ql_switch_container" class="setting_switches">
+              <p>Quick Links (On/Off): </p>
+              <label class="switch">
+                <input id="ql_onoff" type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div id="ad_switch_container" class="setting_switches">
+              <p>Ads (On/Off): </p>
+              <label class="switch">
+                <input id="ad_onoff" type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div id="todo_switch_container" class="setting_switches">
+              <p>To-Do List: </p>
+              <label class="switch">
+                <input id="todo_onoff" type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+        </div>
+      </div>
+      <img id="gear_box" alt="gear icon" src="images/gear.webp"/>
+
+      <script src="/content.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body {
+  background-image: url('images/thanks_bg.jpg');
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#thank_h1 {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  font-size: 3rem;
+  color: #d82626;
+  font-variant-caps: all-petite-caps;
+}
+
+#thank_p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 25%;
+  font-size: 2rem;
+  color: #4e00a5;
+}
+
+#thank_question {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  color: white;
+}
+
+#thank_button {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 15%;
+  left: 43%;
+  height: 7%;
+  border: 0px red solid;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-variant-caps: petite-caps;
+  background-color: #fca300;
+}
+
+#home_top_bar {
+  height: 6%;
+  width: 94%;
+  position: fixed;
+  margin-top: 1%;
+  margin-left: 3%;
+  z-index: 0;
+}
+
+#logo_nav_link {
+  display: inline-block;
+  height: 100%;
+}
+
+#logo_nav {
+  height: 96%;
+  margin-top: 2%
+}
+
+#first_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  z-index: 0;
+}
