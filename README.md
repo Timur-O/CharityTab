@@ -1,4 +1,4 @@
-# Charity Tab: Support Good Causes Effortlessly (Chrome Extension)
+# Charity Tab: Support Good Causes Effortlessly
 #### Raise money for charity effortlessly with every new tab you open.
 ---
 Chrome Store Link: https://chrome.google.com/webstore/detail/jbbikhkomfpfkgeplgpkelfgcafgjkhi
